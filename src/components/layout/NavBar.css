@@ -1,0 +1,12 @@
+nav {
+  background-color: rgb(207, 235, 235);
+}
+
+.nav-item {
+  color: red;
+  font-size: 1.75em;
+}
+
+.navbar {
+  color: red;
+}

@@ -1,0 +1,30 @@
+.App {
+  margin: 0;
+  box-sizing: border-box;
+  display: grid;
+  gap: 10px;
+  background-color: rgb(247, 222, 176);
+  grid-template-columns: repeat(3, 1fr);
+  grid-template-areas: "header header header" "navbar navbar navbar" "main main sidebar" "main main sidebar" "footer footer footer";
+}
+
+.App > header {
+  grid-area: header;
+}
+
+.App > nav {
+  grid-area: navbar;
+}
+
+.App > main,
+.main-content {
+  grid-area: main;
+}
+
+.App > aside {
+  grid-area: sidebar;
+}
+
+.App > footer {
+  grid-area: footer;
+}

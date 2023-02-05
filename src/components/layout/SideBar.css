@@ -1,0 +1,16 @@
+aside {
+  background-color: rgb(255, 243, 226);
+  padding: 2em;
+  height: 100vh;
+}
+
+.login-form {
+  padding: 1em;
+  display: flex;
+  flex-direction: column;
+}
+
+.login-form > input,
+.login-form > button {
+  margin-bottom: 0.4em;
+}
