@@ -5,7 +5,12 @@
   gap: 10px;
   background-color: rgb(247, 222, 176);
   grid-template-columns: repeat(3, 1fr);
-  grid-template-areas: "header header header" "navbar navbar navbar" "main main sidebar" "main main sidebar" "footer footer footer";
+  grid-template-areas:
+    "header header header"
+    "navbar navbar navbar"
+    "main main sidebar"
+    "main main sidebar"
+    "footer footer footer";
 }
 
 .App > header {

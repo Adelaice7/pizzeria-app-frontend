@@ -1,21 +1,23 @@
 import React, { Component } from "react";
 import "./NavBar.css";
+import { NavLink } from "react-router-dom";
 
 class NavBar extends Component {
   state = {};
+
   render() {
     return (
       <React.Fragment>
-        <nav className="navbar navbar-expand-lg navbar-light bg-light">
+        <nav className="navbar navbar-expand-sm navbar-light bg-light">
           <div className="container-fluid">
             <button
               className="navbar-toggler"
               type="button"
               data-mdb-toggle="collapse"
-              data-mdb-target="#navbarCenteredExample"
-              aria-controls="navbarCenteredExample"
               aria-expanded="false"
               aria-label="Toggle navigation"
+              data-bs-toggle="collapse"
+              data-bs-target="#pizzeria-navbar"
             >
               <i className="fas fa-bars"></i>
             </button>
@@ -26,24 +28,24 @@ class NavBar extends Component {
             >
               <ul className="navbar-nav mb-2 mb-lg-0">
                 <li className="nav-item">
-                  <a className="nav-link active" aria-current="page" href="#">
+                  <NavLink to="/" className="nav-link active">
                     Home
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <NavLink to="/pizzas" className="nav-link">
                     Pizzas
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
+                  <NavLink to="/salads" className="nav-link">
                     Salads
-                  </a>
+                  </NavLink>
                 </li>
                 <li className="nav-item">
-                  <a className="nav-link" href="#">
-                    Drinks
-                  </a>
+                  <NavLink to="/about" className="nav-link">
+                    About
+                  </NavLink>
                 </li>
               </ul>
             </div>

@@ -24,6 +24,7 @@ class CustomerSignUpPage extends Component {
     pendingApiCall: false,
     errors: {},
     passwordRepeatConfirmed: false,
+    successMessage: "",
   };
 
   handleChange = (event) => {
@@ -66,7 +67,11 @@ class CustomerSignUpPage extends Component {
     this.props.actions
       .sendSignUpForm(this.state)
       .then((response) => {
-        this.setState({ pendingApiCall: false });
+        console.log(response.data);
+        this.setState({
+          pendingApiCall: false,
+          successMessage: response.data.message,
+        });
       })
       .catch((apiError) => {
         let errors = { ...this.state.errors };
@@ -77,10 +82,22 @@ class CustomerSignUpPage extends Component {
       });
   };
 
+  renderTopMessage = () => {
+    if (this.state.successMessage) {
+      return (
+        <h2 className="success-message text-center text-success">
+          {this.state.successMessage}
+        </h2>
+      );
+    } else {
+      return <h1 className="text-center">Sign Up</h1>;
+    }
+  };
+
   render() {
     return (
       <React.Fragment>
-        <h1 className="text-center">Sign Up</h1>
+        {this.renderTopMessage()}
         <div className="signup-section">
           <form onSubmit={this.handleSubmit} className="signup-form">
             <Input
