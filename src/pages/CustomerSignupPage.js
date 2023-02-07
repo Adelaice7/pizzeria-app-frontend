@@ -157,7 +157,8 @@ class CustomerSignUpPage extends Component {
               type="submit"
               className="btn btn-primary"
               disabled={
-                this.state.pendingApiCall || this.state.passwordRepeatConfirmed
+                this.state
+                  .pendingApiCall /* || this.state.passwordRepeatConfirmed*/
               }
             >
               {this.state.pendingApiCall && (

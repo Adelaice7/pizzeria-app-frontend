@@ -6,7 +6,7 @@ class Input extends Component {
   };
 
   render() {
-    let inputClassName = "form-control";
+    let inputClassName = "form-control mb-2";
 
     if (this.props.hasError !== undefined) {
       inputClassName += this.props.hasError ? " is-invalid" : " is-valid";
