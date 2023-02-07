@@ -53,7 +53,6 @@ class LoginFormPage extends Component {
             label="Username"
             type="text"
             name="username"
-            id="username"
             placeholder="Your username"
             onChange={this.handleChange}
           />

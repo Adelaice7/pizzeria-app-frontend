@@ -3,12 +3,11 @@ import LoginFormPage from "../../pages/LoginFormPage";
 import "./SideBar.css";
 
 class SideBar extends Component {
-  state = {};
   render() {
     return (
       <React.Fragment>
         <aside className="sidebar">
-          <LoginFormPage />
+          <LoginFormPage actions={this.props.actions} />
         </aside>
       </React.Fragment>
     );
