@@ -14,13 +14,21 @@ const Layout = ({ children }) => {
     postLogin: apiCalls.login,
   };
 
+  const productActions = {
+    getPizzas: apiCalls.getPizzas,
+    getSalads: apiCalls.getSalads,
+  };
+
   return (
     <React.Fragment>
       <Header />
       <NavBar />
       <Routes>
         <Route path="/" element={<MainContent />} />
-        <Route path="/pizzas" element={<PizzaPage />} />
+        <Route
+          path="/pizzas"
+          element={<PizzaPage actions={productActions} />}
+        />
         <Route path="/salads" element={<SaladPage />} />
       </Routes>
       {/* <MainContent /> */}

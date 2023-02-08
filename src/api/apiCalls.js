@@ -10,3 +10,11 @@ export const login = (customer) => {
     password: customer.password,
   });
 };
+
+export const getPizzas = () => {
+  return axios.get("/api/products/pizzas");
+};
+
+export const getSalads = () => {
+  return axios.get("/api/products/salads");
+};
