@@ -8,6 +8,9 @@ import * as apiCalls from "../../api/apiCalls";
 import { Routes, Route } from "react-router-dom";
 import PizzaPage from "../PizzaPage";
 import SaladPage from "../SaladPage";
+import "./Layout.css";
+import CustomerSignup from "./CustomerSignup";
+import AboutPage from "../AboutPage";
 
 const Layout = ({ children }) => {
   const actions = {
@@ -25,11 +28,16 @@ const Layout = ({ children }) => {
       <NavBar />
       <Routes>
         <Route path="/" element={<MainContent />} />
+        <Route path="/signup" element={<CustomerSignup />} />
         <Route
           path="/pizzas"
           element={<PizzaPage actions={productActions} />}
         />
-        <Route path="/salads" element={<SaladPage />} />
+        <Route
+          path="/salads"
+          element={<SaladPage actions={productActions} />}
+        />
+        <Route path="/about" element={<AboutPage />} />
       </Routes>
       {/* <MainContent /> */}
       <SideBar actions={actions} />

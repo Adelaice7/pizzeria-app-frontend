@@ -1,5 +1,6 @@
 import React, { Component } from "react";
-import Pizza from "./Pizza";
+import Product from "./Product";
+import "./PizzaPage.css";
 
 class PizzaPage extends Component {
   static defaultProps = {
@@ -43,10 +44,12 @@ class PizzaPage extends Component {
     console.log("State: ", this.state.pizzas);
     return (
       <main className="main-content pizza-page">
-        <h1>Pizzas</h1>
-        {this.state.pizzas.map((pizza) => (
-          <Pizza pizza={pizza} />
-        ))}
+        <h1 className="product-page-title">Pizzas</h1>
+        <div className="product-list pizza-list">
+          {this.state.pizzas.map((pizza) => (
+            <Product product={pizza} />
+          ))}
+        </div>
       </main>
     );
   }

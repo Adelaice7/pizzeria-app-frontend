@@ -1,5 +1,6 @@
 import React, { Component } from "react";
 import Input from "../components/Input";
+import { NavLink } from "react-router-dom";
 
 class LoginFormPage extends Component {
   static defaultProps = {
@@ -72,7 +73,10 @@ class LoginFormPage extends Component {
             Log In
           </button>
           <span>
-            No account yet? <a className="sign-up-link">Sign up!</a>
+            Not a member yet?
+            <NavLink to="/signup" className="sign-up-link">
+              Sign up!
+            </NavLink>
           </span>
         </form>
       </div>

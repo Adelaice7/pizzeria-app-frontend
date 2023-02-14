@@ -1,0 +1,33 @@
+.product {
+  display: flex;
+  flex-direction: column;
+  background-color: white;
+  padding: 1em;
+  flex-wrap: nowrap;
+  align-items: center;
+  justify-content: center;
+}
+
+.product-name {
+  text-align: center;
+  text-transform: uppercase;
+  letter-spacing: 0.1em;
+}
+
+.product-img {
+  margin: 0.5em;
+  border: 2px solid black;
+  max-width: 100%;
+}
+
+.product-desc {
+  margin: 0.5em 0;
+}
+
+.product-options {
+  width: 100%;
+  display: flex;
+  flex-wrap: nowrap;
+  justify-content: space-between;
+  align-items: center;
+}
